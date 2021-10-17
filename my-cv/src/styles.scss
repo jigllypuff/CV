@@ -1,0 +1,56 @@
+@import "src/custom/colors";
+
+p {
+  color: $mint;
+  font-family: monospace;
+  margin-bottom: 0 !important;
+  line-height: 17px;
+}
+
+.custom-label-mint-xxl {
+  color: $dark-mint;
+  font-size: 45px;
+}
+
+.custom-label-white-m {
+  color: $white;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.custom-label-white-s {
+  color: $white;
+  font-family: monospace;
+  font-size: 17px;
+}
+
+.custom-label-mint-xl {
+  color: $dark-mint;
+  font-size: 32px;
+}
+
+.custom-label-white-xl {
+  color: $white;
+  font-family: monospace;
+  font-size: 28px;
+}
+
+.custom-label-mint-xs {
+  color: $dark-mint;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.custom-label-white-xs {
+  color: $white;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.tab-background-color {
+  background-color: $dark-gray;
+}
+
+.tab-background- {
+  background-color: $light-gray;
+}

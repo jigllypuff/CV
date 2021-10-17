@@ -1,0 +1,65 @@
+<div class="row">
+  <div class="col-12">
+    <div class="pl-4 text-center">
+      <div class="p-3 pb-0 tab-background-color">
+        <p class="pb-5">{{ userInfo.firstName }} {{ userInfo.lastName }}</p>
+        <div class="d-flex justify-content-end border-top">
+          <label class="custom-label-mint-xxl">{{ userInitials }}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="pl-4">
+      <div class="p-3 pb-0 tab-background-color">
+        <p>Position:</p>
+        <p class="custom-label-mint-xs">{{ userInfo.position }}</p>
+      </div>
+      <div class="p-3 pb-0 tab-background-color">
+        <p>Contact:</p>
+        <p class="custom-label-mint-xs">{{ userInfo.contact.mobile }}</p>
+        <p class="custom-label-mint-xs text-break">
+          {{ userInfo.contact.email }}
+        </p>
+      </div>
+      <div class="p-3 pb-0 tab-background-color">
+        <p>Residence:</p>
+        <p class="custom-label-mint-xs">{{ userInfo.city }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="pl-4">
+      <div class="p-3 pb-0 tab-background-color">
+        <p>About me:</p>
+        <p class="custom-label-mint-xs">
+          {{ userInfo.descriptions.about }}
+        </p>
+      </div>
+      <div class="p-3 pb-0 tab-background-color">
+        <p>My goals:</p>
+        <p class="custom-label-mint-xs">
+          {{ userInfo.descriptions.goals }}
+        </p>
+      </div>
+      <div class="p-3 tab-background-color">
+        <p>Actually learning:</p>
+        <p class="custom-label-mint-xs">
+          {{ userInfo.descriptions.learningInfo }}
+        </p>
+      </div>
+      <div class="p-3 tab-background-color">
+        <p>Links:</p>
+        <div class="row">
+          <a href="#" class="custom-label-mint-xs col-12">Linkedin</a>
+          <a
+            href="https://github.com/jigllypuff"
+            class="custom-label-mint-xs col-12"
+          >
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

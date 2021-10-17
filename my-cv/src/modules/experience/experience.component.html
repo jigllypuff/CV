@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-12">
+    <div class="pl-4 pt-1 tab-background-color">
+      <div class="p-3 pb-0">
+        <p class="custom-label-white-xl">Experience:</p>
+      </div>
+      <ng-container
+        *ngFor="let company of companyList"
+        [ngTemplateOutlet]="companyInfo"
+        [ngTemplateOutletContext]="{ item: company }"
+      ></ng-container>
+    </div>
+  </div>
+</div>
+
+<ng-template #companyInfo let-item="item">
+  <div class="row p-4">
+    <div class="col"><hr /></div>
+    <div class="col-auto">
+      <p class="custom-label-white-s">
+        {{ item.company.period.dateStart | date }} -
+        {{ item.company.period.dateEnd | date }}
+      </p>
+    </div>
+    <div class="col"><hr /></div>
+  </div>
+  <div class="col-12">
+    <p class="custom-label-mint-xl text-center">{{ item.company.name }}</p>
+    <div *ngFor="let item of item.project; let i = index">
+      <div
+        [ngClass]="i % 2 == 0 ? 'tab-background-zebra' : 'tab-background-color'"
+      >
+        <p class="custom-label-white-m offset-1">Project {{ i + 1 }}</p>
+        <p class="text-center">
+          {{ item.period.dateStart | date }} - {{ item.period.dateEnd | date }}
+        </p>
+        <div class="col-10 offset-1 text-center">
+          <p class="custom-label-white-xs">Sector: {{ item.section }},</p>
+          <p class="mt-2 mb-2 custom-label-mint-xs">
+            Description: {{ item.description }},
+          </p>
+          <p class="custom-label-white-xs">
+            Technologies: {{ item.technolgies }}
+          </p>
+        </div>
+        <div class="col-6 offset-3"><hr /></div>
+      </div>
+    </div>
+  </div>
+</ng-template>

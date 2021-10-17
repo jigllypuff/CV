@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-12 p-xl-0">
+    <div class="pl-4 pt-1 tab-background-color">
+      <div class="p-3 pb-0">
+        <p class="custom-label-white-xl">Education:</p>
+      </div>
+      <ng-container
+        *ngFor="let university of univeristyList"
+        [ngTemplateOutlet]="universityInfo"
+        [ngTemplateOutletContext]="{ item: university }"
+      ></ng-container>
+    </div>
+  </div>
+</div>
+
+<ng-template #universityInfo let-item="item">
+  <div class="row p-4">
+    <div class="col"><hr /></div>
+    <div class="col-auto custom-label-mint-xs">
+      {{ item.period.dateStart | date }} - {{ item.period.dateEnd | date }}
+    </div>
+    <div class="col"><hr /></div>
+  </div>
+  <div class="row p-4 pt-0 text-center">
+    <div class="col-12">
+      <p class="">{{ item.name }}</p>
+    </div>
+    <span class="custom-label-mint-xs"
+      >Kierunek: {{ item.specialization }}</span
+    >
+    <span class="custom-label-mint-xs">Tytuł: {{ item.graduationTitle }}</span>
+  </div>
+</ng-template>
